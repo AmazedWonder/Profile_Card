@@ -1,0 +1,1 @@
+document.querySelector('.follow-button').addEventListener('click', function() {this.textContent = this.textContent === 'Follow' ? 'Following' : 'Follow'; this.classList.toggle('following')});
