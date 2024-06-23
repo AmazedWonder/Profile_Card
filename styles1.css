@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #6c63ff;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center; /* Center the cards horizontally */
+    align-items: center; /* Center the cards vertically */
+    gap: 40px; /* Space between the cards */
+    padding: 20px; /* Padding around the container */
+}
+
+.profile-card, .profile-card1 {
+    border-radius: 2px;
+    overflow: hidden;
+    width: 300px;
+    height: 450px; /* ensures both cards have same height */
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.6);
+    text-align: left; /* position the text left */
+}
+
+.profile-card1 {
+    position: relative; /* Necessary for absolute positioning of overlay content */
+    background: url('images/profile-card-pic.jpeg') no-repeat center center;
+    background-size: cover; /* Cover the entire card with the background image */
+    color: white; /* Text color for readability over the background image */
+}
+
+.profile-card1 .profile-header {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    align-items: flex-start; 
+    /* Center text horizontally */
+    justify-content: center; /* Center text vertically */
+    height: 92%; /* Ensure it covers the entire card */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent background for better text visibility */
+    border-radius: 2px;
+}
+
+.profile-card1 .profile-title{
+    color: rgb(211, 205, 205);
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.profile-card1 .profile-content {
+    /* push the profile content to buttom */
+    margin-top: auto;
+    text-align: center;
+}
+
+.profile-card1 .top-bar {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: white;
+    font-size: 10px;
+}
+
+.profile-card1 .top-bar .left-icons {
+    display: flex;
+    align-items: center;
+    /* gap: 8px; */
+}
+
+/* .circle-icon {
+    
+} */
+
+.profile-card1 .top-bar .center-time {
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+.profile-card1 .top-bar .right-icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile-card1 .top-bar i {
+    font-size: 10px;
+}
+
+.profile-card1 .top-bar .carrier {
+    margin-left: 5px;
+}
+
+.profile-card1 .profile-name {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    color: white;
+    margin: 5px 0;
+}
+
+.profile-card1 .arrow-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(63, 62, 62, 0.7);
+    border-radius: 50%;
+    border: none;
+}
+
+.profile-card1 .arrow-circle i {
+    color: white;
+    font-size: 5px;
+    margin-left: 20px;
+}
+
+.profile-card {
+    background: white;
+}
+
+.profile-header {
+    padding: 20px;
+    background-color: #f8f8f8;
+    position: relative;
+    text-align: left;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.gender-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #4a4a4a;
+}
+
+.profile-name {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #6c63ff;
+}
+
+.profile-title {
+    font-family: "Rubik", sans-serif;
+    font-size: 14px;
+    color: #7a7a7a;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.profile-details {
+    padding: 20px;
+    font-family: "Rubik", sans-serif;
+}
+
+.profile-bio {
+    font-size: 13px;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+}
+
+.profile-stats {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.stats {
+    text-align: center;
+}
+
+.stats-number {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+.stats-label {
+    font-size: 12px;
+    color: #7a7a7a;
+}
+
+.follow-button {
+    width: 93%;
+    margin-top: 30px;
+    margin-left: 10px;
+    padding: 15px;
+    background-color: #6c63ff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.follow-button:hover {
+    background-color: #534bc0;
+}
+
+.following {
+    background-color: #4a4a4a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        gap: 10px; /* Less gap between the cards on small screens */
+        /* padding: 10px;  */
+        /* Less padding on small screens */
+    }
+
+    /* .profile-card, .profile-card1 {
+        width: 100%; */
+         /* Full width on small screens */
+        /* max-width: 300px; */
+         /* Ensure it doesn't get too wide */
+    /* } */
+}
